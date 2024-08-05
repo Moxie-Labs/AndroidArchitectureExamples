@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.moxielabs.androidarchitectureexamples.R
-import com.moxielabs.androidarchitectureexamples.mvc.controller.MvcFragment.ViewHolder
+import com.moxielabs.androidarchitectureexamples.mvp.view.ViewHolder
 import com.moxielabs.androidarchitectureexamples.mvvm.viewmodel.MvvmViewModel
 
 class MvvmFragment: Fragment() {
@@ -41,7 +41,7 @@ class MvvmFragment: Fragment() {
                     }
 
                     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-                        holder.text.text = viewModel.getFruitDisplayText(position)
+                        holder.text?.text = viewModel.getFruitDisplayText(position)
                     }
                 }
             }

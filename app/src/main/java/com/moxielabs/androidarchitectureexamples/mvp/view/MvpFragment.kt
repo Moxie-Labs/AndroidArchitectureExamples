@@ -37,7 +37,7 @@ class MvpFragment : Fragment(), MvpContract.View {
         presenter.fetchList()
     }
 
-    override fun displayList(list: List<Fruit>) {
+    override fun displayList(list: List<String>) {
         recyclerView?.adapter = Adapter(list)
     }
 }
