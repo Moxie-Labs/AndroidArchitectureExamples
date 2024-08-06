@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.moxielabs.androidarchitectureexamples.R
-import com.moxielabs.androidarchitectureexamples.mvc.model.FruitRepository
+import com.moxielabs.androidarchitectureexamples.shared.network.FruitRepository
 import kotlin.apply
 
 class MvcFragment : Fragment() {
