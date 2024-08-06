@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mvc"
+        android:title="MVC"
+        android:enabled="true" />
+    <item
+        android:id="@+id/mvp"
+        android:title="MVP"
+        android:enabled="true" />
+    <item
+        android:id="@+id/mvvm"
+        android:title="MVVM"
+        android:enabled="true" />
+    <item
+        android:id="@+id/mvi"
+        android:title="MVI"
+        android:enabled="true" />
+</menu>
