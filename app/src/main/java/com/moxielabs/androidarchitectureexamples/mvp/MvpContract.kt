@@ -1,6 +1,6 @@
 package com.moxielabs.androidarchitectureexamples.mvp
 
-import com.moxielabs.androidarchitectureexamples.mvp.model.Fruit
+import com.moxielabs.androidarchitectureexamples.shared.models.Fruit
 
 interface MvpContract {
     interface View {

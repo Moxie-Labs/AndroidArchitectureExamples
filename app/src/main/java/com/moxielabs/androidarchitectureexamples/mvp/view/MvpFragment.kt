@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.moxielabs.androidarchitectureexamples.R
 import com.moxielabs.androidarchitectureexamples.mvp.MvpContract
-import com.moxielabs.androidarchitectureexamples.mvp.model.Fruit
 import com.moxielabs.androidarchitectureexamples.mvp.presenter.MvpPresenter
 import com.moxielabs.androidarchitectureexamples.mvp.view.Adapter
+import com.moxielabs.androidarchitectureexamples.shared.models.Fruit
 
 class MvpFragment : Fragment(), MvpContract.View {
 
