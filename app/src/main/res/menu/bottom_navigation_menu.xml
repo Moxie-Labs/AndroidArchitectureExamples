@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/mvc"
-        android:title="MVC"
+        android:title="@string/mvc"
         android:enabled="true" />
     <item
         android:id="@+id/mvp"
-        android:title="MVP"
+        android:title="@string/mvp"
         android:enabled="true" />
     <item
         android:id="@+id/mvvm"
-        android:title="MVVM"
+        android:title="@string/mvvm"
         android:enabled="true" />
     <item
         android:id="@+id/mvi"
-        android:title="MVI"
+        android:title="@string/mvi"
         android:enabled="true" />
 </menu>
