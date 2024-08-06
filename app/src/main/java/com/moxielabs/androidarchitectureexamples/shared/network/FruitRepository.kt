@@ -1,6 +1,6 @@
-package com.moxielabs.androidarchitectureexamples.mvc.model
+package com.moxielabs.androidarchitectureexamples.shared.network
 
-import com.moxielabs.androidarchitectureexamples.mvc.model.Fruit
+import com.moxielabs.androidarchitectureexamples.shared.models.Fruit
 
 object FruitRepository {
 
