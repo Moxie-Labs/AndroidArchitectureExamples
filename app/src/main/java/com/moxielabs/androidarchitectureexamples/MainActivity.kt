@@ -1,4 +1,4 @@
-package com.moxielabs.androidarchitectureexamples.shared.views
+package com.moxielabs.androidarchitectureexamples
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentContainerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
-import com.moxielabs.androidarchitectureexamples.R
 import com.moxielabs.androidarchitectureexamples.mvc.controller.MvcFragment
 import com.moxielabs.androidarchitectureexamples.mvvm.views.MvvmFragment
 
