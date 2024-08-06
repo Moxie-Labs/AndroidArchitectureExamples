@@ -8,6 +8,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.moxielabs.androidarchitectureexamples.R
 import com.moxielabs.androidarchitectureexamples.mvc.controller.MvcFragment
+import com.moxielabs.androidarchitectureexamples.mvvm.views.MvvmFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +36,13 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                     R.id.mvp -> {}
-                    R.id.mvvm -> {}
+                    R.id.mvvm -> {
+                        fragmentContainer?.id?.let {
+                            supportFragmentManager.beginTransaction()
+                                .replace(it, MvvmFragment())
+                                .commit()
+                        }
+                    }
                     R.id.mvi -> {}
                 }
                 return true
