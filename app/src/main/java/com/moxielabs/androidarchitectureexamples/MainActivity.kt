@@ -9,6 +9,7 @@ import com.google.android.material.navigation.NavigationBarView
 import com.moxielabs.androidarchitectureexamples.mvc.MvcFragment
 import com.moxielabs.androidarchitectureexamples.mvp.view.MvpFragment
 import kotlin.let
+import com.moxielabs.androidarchitectureexamples.mvvm.views.MvvmFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +43,13 @@ class MainActivity : AppCompatActivity() {
                                 .commit()
                         }
                     }
-                    R.id.mvvm -> {}
+                    R.id.mvvm -> {
+                        fragmentContainer?.id?.let {
+                            supportFragmentManager.beginTransaction()
+                                .replace(it, MvvmFragment())
+                                .commit()
+                        }
+                    }
                     R.id.mvi -> {}
                 }
                 return true
