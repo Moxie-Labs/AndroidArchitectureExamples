@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.moxielabs.androidarchitectureexamples.R
+import com.moxielabs.androidarchitectureexamples.shared.models.Fruit
 import com.moxielabs.androidarchitectureexamples.shared.network.FruitRepository
 import kotlin.apply
 
@@ -44,6 +45,10 @@ class MvcFragment : Fragment() {
                 }
             }
         }
+    }
+
+    fun Fruit.displayText(): String {
+        return "${this.taste} ${this.color} ${this.name}"
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

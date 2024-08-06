@@ -5,7 +5,7 @@ import com.moxielabs.androidarchitectureexamples.shared.models.Fruit
 interface MvpContract {
     interface View {
         val presenter: Presenter
-        fun displayList(list: List<Fruit>)
+        fun displayList(list: List<String>)
     }
 
     interface Presenter {
