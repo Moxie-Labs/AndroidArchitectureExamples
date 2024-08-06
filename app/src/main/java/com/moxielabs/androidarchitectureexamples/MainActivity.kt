@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentContainerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
-import com.moxielabs.androidarchitectureexamples.mvc.controller.MvcFragment
-import com.moxielabs.androidarchitectureexamples.mvc.controller.MvpFragment
+import com.moxielabs.androidarchitectureexamples.mvc.MvcFragment
+import com.moxielabs.androidarchitectureexamples.mvp.view.MvpFragment
 import kotlin.let
 
 class MainActivity : AppCompatActivity() {

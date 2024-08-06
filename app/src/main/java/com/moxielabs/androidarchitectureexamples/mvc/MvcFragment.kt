@@ -1,4 +1,4 @@
-package com.moxielabs.androidarchitectureexamples.mvc.controller
+package com.moxielabs.androidarchitectureexamples.mvc
 
 import android.os.Bundle
 import android.view.LayoutInflater
