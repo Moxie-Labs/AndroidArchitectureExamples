@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.moxielabs.androidarchitectureexamples.R
 import com.moxielabs.androidarchitectureexamples.mvc.controller.MvcFragment.ViewHolder
-import com.moxielabs.androidarchitectureexamples.mvvm.viewmodel.MainViewModel
+import com.moxielabs.androidarchitectureexamples.mvvm.viewmodel.MvvmViewModel
 
 class MvvmFragment: Fragment() {
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: MvvmViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,7 +24,7 @@ class MvvmFragment: Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_architecture, container, false)
 
-        viewModel = ViewModelProvider(requireActivity())[MainViewModel::class.java]
+        viewModel = ViewModelProvider(requireActivity())[MvvmViewModel::class.java]
 
         viewModel.fruits.observe(viewLifecycleOwner, Observer { fruits ->
             view.findViewById<RecyclerView>(R.id.recycler_view)?.apply {

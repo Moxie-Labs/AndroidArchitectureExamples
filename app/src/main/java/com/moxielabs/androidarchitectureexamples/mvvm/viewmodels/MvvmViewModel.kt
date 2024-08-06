@@ -9,7 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class MainViewModel : ViewModel() {
+class MvvmViewModel : ViewModel() {
 
     private val fruitRepository =
         com.moxielabs.androidarchitectureexamples.shared.network.FruitRepository
