@@ -20,6 +20,11 @@ class MainViewModel : ViewModel() {
         fetchFruits()
     }
 
+    fun getFruitDisplayText(position: Int): String {
+        val fruit = fruits.value?.get(position)
+        return "${fruit?.taste} ${fruit?.color} ${fruit?.name}"
+    }
+
     private fun fetchFruits() {
         viewModelScope.launch {
             val fruitsList = withContext(Dispatchers.IO) {

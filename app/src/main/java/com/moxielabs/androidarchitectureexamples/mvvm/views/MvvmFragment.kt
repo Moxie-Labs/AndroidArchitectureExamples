@@ -41,9 +41,7 @@ class MvvmFragment: Fragment() {
                     }
 
                     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-                        val fruit = fruits[position]
-
-                        "${fruit.taste} ${fruit.color} ${fruit.name}".also { holder.text.text = it }
+                        holder.text.text = viewModel.getFruitDisplayText(position)
                     }
                 }
             }
