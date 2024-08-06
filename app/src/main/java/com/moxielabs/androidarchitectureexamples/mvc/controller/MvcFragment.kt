@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.moxielabs.androidarchitectureexamples.R
-import com.moxielabs.androidarchitectureexamples.shared.network.FruitRepository
+import com.moxielabs.androidarchitectureexamples.mvc.model.FruitRepository
 import kotlin.apply
 
 class MvcFragment : Fragment() {
@@ -18,7 +18,7 @@ class MvcFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_mvc, container, false)
+        return inflater.inflate(R.layout.fragment_architecture, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -35,7 +35,7 @@ class MvcFragment : Fragment() {
                 override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
                     return ViewHolder(
                         LayoutInflater.from(parent.context)
-                            .inflate(R.layout.mvc_list_item, parent, false)
+                            .inflate(R.layout.shared_list_item, parent, false)
                     )
                 }
 
