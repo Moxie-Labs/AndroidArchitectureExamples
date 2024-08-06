@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentContainerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.moxielabs.androidarchitectureexamples.mvc.controller.MvcFragment
+import com.moxielabs.androidarchitectureexamples.mvc.controller.MvpFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +34,13 @@ class MainActivity : AppCompatActivity() {
                                 .commit()
                         }
                     }
-                    R.id.mvp -> {}
+                    R.id.mvp -> {
+                        fragmentContainer?.id?.let {
+                            supportFragmentManager.beginTransaction()
+                                .replace(it, MvpFragment())
+                                .commit()
+                        }
+                    }
                     R.id.mvvm -> {}
                     R.id.mvi -> {}
                 }
