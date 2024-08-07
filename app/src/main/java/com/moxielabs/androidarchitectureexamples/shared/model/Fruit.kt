@@ -1,4 +1,4 @@
-package com.moxielabs.androidarchitectureexamples.shared.models
+package com.moxielabs.androidarchitectureexamples.shared.model
 
 data class Fruit(
     val name: String,

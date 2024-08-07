@@ -1,6 +1,6 @@
 package com.moxielabs.androidarchitectureexamples.shared.network
 
-import com.moxielabs.androidarchitectureexamples.shared.models.Fruit
+import com.moxielabs.androidarchitectureexamples.shared.model.Fruit
 
 object FruitRepository {
 
