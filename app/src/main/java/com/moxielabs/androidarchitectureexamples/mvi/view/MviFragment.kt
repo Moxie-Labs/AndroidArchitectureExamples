@@ -29,9 +29,9 @@ class MviFragment : Fragment() {
 
         viewModel = ViewModelProvider(requireActivity())[MviViewModel::class.java]
 
-        viewModel.state.observe(viewLifecycleOwner, Observer { state ->
+        viewModel.state.observe(viewLifecycleOwner) { state ->
             render(state, view)
-        })
+        }
 
         view.findViewById<RecyclerView>(R.id.recycler_view)?.apply {
             layoutManager = LinearLayoutManager(this.context)
