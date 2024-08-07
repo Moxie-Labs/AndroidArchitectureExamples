@@ -9,7 +9,7 @@ import com.google.android.material.navigation.NavigationBarView
 import com.moxielabs.androidarchitectureexamples.mvc.MvcFragment
 import com.moxielabs.androidarchitectureexamples.mvp.view.MvpFragment
 import kotlin.let
-import com.moxielabs.androidarchitectureexamples.mvvm.views.MvvmFragment
+import com.moxielabs.androidarchitectureexamples.mvvm.view.MvvmFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

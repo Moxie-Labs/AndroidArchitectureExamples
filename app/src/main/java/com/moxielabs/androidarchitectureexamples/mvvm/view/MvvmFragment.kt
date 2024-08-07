@@ -1,4 +1,4 @@
-package com.moxielabs.androidarchitectureexamples.mvvm.views
+package com.moxielabs.androidarchitectureexamples.mvvm.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
