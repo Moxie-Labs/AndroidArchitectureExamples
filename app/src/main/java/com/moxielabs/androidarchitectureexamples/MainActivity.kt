@@ -26,41 +26,33 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        findViewById<BottomNavigationView>(R.id.bottom_navigation)?.setOnItemSelectedListener(object : NavigationBarView.OnItemSelectedListener {
-            override fun onNavigationItemSelected(item: MenuItem): Boolean {
-                // TODO: add relevant fragment to container on nav item click
-                when (item.itemId) {
-                    R.id.mvc -> {
-                        fragmentContainer?.id?.let {
-                            supportFragmentManager.beginTransaction()
-                                .replace(it, MvcFragment())
-                                .commit()
-                        }
+        findViewById<BottomNavigationView>(R.id.bottom_navigation)?.setOnItemSelectedListener(
+            object : NavigationBarView.OnItemSelectedListener {
+                override fun onNavigationItemSelected(item: MenuItem): Boolean {
+                    fragmentContainer?.id?.let { fragmentContainerId ->
+                        supportFragmentManager.beginTransaction().apply {
+                            when (item.itemId) {
+                                R.id.mvc -> {
+                                    replace(fragmentContainerId, MvcFragment())
+                                }
+
+                                R.id.mvp -> {
+                                    replace(fragmentContainerId, MvpFragment())
+                                }
+
+                                R.id.mvvm -> {
+                                    replace(fragmentContainerId, MvvmFragment())
+                                }
+
+                                R.id.mvi -> {
+                                    replace(fragmentContainerId, MviFragment())
+                                }
+                            }
+                        }.commit()
                     }
-                    R.id.mvp -> {
-                        fragmentContainer?.id?.let {
-                            supportFragmentManager.beginTransaction()
-                                .replace(it, MvpFragment())
-                                .commit()
-                        }
-                    }
-                    R.id.mvvm -> {
-                        fragmentContainer?.id?.let {
-                            supportFragmentManager.beginTransaction()
-                                .replace(it, MvvmFragment())
-                                .commit()
-                        }
-                    }
-                    R.id.mvi -> {
-                        fragmentContainer?.id?.let {
-                            supportFragmentManager.beginTransaction()
-                                .replace(it, MviFragment())
-                                .commit()
-                        }
-                    }
+                    return true
                 }
-                return true
             }
-        })
+        )
     }
 }
