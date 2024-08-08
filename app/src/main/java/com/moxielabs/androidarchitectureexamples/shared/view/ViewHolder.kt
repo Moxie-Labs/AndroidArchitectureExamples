@@ -1,4 +1,4 @@
-package com.moxielabs.androidarchitectureexamples.mvp.view
+package com.moxielabs.androidarchitectureexamples.shared.view
 
 import com.moxielabs.androidarchitectureexamples.R
 import android.view.View
