@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentContainerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.moxielabs.androidarchitectureexamples.mvc.MvcFragment
+import com.moxielabs.androidarchitectureexamples.mvi.view.MviFragment
 import com.moxielabs.androidarchitectureexamples.mvp.view.MvpFragment
 import kotlin.let
 import com.moxielabs.androidarchitectureexamples.mvvm.view.MvvmFragment
@@ -50,7 +51,13 @@ class MainActivity : AppCompatActivity() {
                                 .commit()
                         }
                     }
-                    R.id.mvi -> {}
+                    R.id.mvi -> {
+                        fragmentContainer?.id?.let {
+                            supportFragmentManager.beginTransaction()
+                                .replace(it, MviFragment())
+                                .commit()
+                        }
+                    }
                 }
                 return true
             }
