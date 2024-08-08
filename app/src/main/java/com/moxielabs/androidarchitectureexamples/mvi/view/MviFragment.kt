@@ -5,16 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.moxielabs.androidarchitectureexamples.R
 import com.moxielabs.androidarchitectureexamples.mvi.intent.FruitIntent
-import com.moxielabs.androidarchitectureexamples.mvi.model.getDisplayText
+import com.moxielabs.androidarchitectureexamples.shared.model.getDisplayText
 import com.moxielabs.androidarchitectureexamples.mvi.state.FruitState
 import com.moxielabs.androidarchitectureexamples.mvi.viewmodel.MviViewModel
-import com.moxielabs.androidarchitectureexamples.mvp.view.ViewHolder
+import com.moxielabs.androidarchitectureexamples.shared.view.ViewHolder
 
 class MviFragment : Fragment() {
 
@@ -25,7 +24,7 @@ class MviFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_architecture, container, false)
+        val view = inflater.inflate(R.layout.fragment_list, container, false)
 
         viewModel = ViewModelProvider(requireActivity())[MviViewModel::class.java]
 

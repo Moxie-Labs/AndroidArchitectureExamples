@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.moxielabs.androidarchitectureexamples.R
 import com.moxielabs.androidarchitectureexamples.mvp.MvpContract
 import com.moxielabs.androidarchitectureexamples.mvp.presenter.MvpPresenter
+import com.moxielabs.androidarchitectureexamples.shared.view.Adapter
 
 class MvpFragment : Fragment(), MvpContract.View {
 
@@ -22,7 +23,7 @@ class MvpFragment : Fragment(), MvpContract.View {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_architecture, container, false)
+        return inflater.inflate(R.layout.fragment_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

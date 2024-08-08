@@ -1,10 +1,9 @@
-package com.moxielabs.androidarchitectureexamples.mvp.view
+package com.moxielabs.androidarchitectureexamples.shared.view
 
 import android.view.LayoutInflater
 import com.moxielabs.androidarchitectureexamples.R
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.moxielabs.androidarchitectureexamples.shared.view.ViewHolder
 
 class Adapter(val list: List<String>): RecyclerView.Adapter<ViewHolder>() {
     override fun getItemCount(): Int = list.size
