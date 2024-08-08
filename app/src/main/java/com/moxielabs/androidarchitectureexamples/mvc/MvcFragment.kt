@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.moxielabs.androidarchitectureexamples.R
-import com.moxielabs.androidarchitectureexamples.shared.model.Fruit
+import com.moxielabs.androidarchitectureexamples.shared.model.getDisplayText
 import com.moxielabs.androidarchitectureexamples.shared.network.FruitRepository
+import com.moxielabs.androidarchitectureexamples.shared.view.Adapter
 import kotlin.apply
 
 class MvcFragment : Fragment() {
@@ -19,39 +19,18 @@ class MvcFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_architecture, container, false)
+        return inflater.inflate(R.layout.fragment_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val fruits = FruitRepository.getFruits()
-
         view.findViewById<RecyclerView>(R.id.recycler_view)?.apply {
             layoutManager = LinearLayoutManager(this.context)
 
-            adapter = object : RecyclerView.Adapter<ViewHolder>() {
-                override fun getItemCount(): Int = fruits.size
-
-                override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-                    return ViewHolder(
-                        LayoutInflater.from(parent.context)
-                            .inflate(R.layout.shared_list_item, parent, false)
-                    )
-                }
-
-                override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-                    holder.text.text = fruits[position].displayText()
-                }
-            }
+            adapter = Adapter(
+                FruitRepository.getFruits().map { it.getDisplayText() }
+            )
         }
-    }
-
-    fun Fruit.displayText(): String {
-        return "${this.taste} ${this.color} ${this.name}"
-    }
-
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val text: TextView = view.findViewById(R.id.text)
     }
 }

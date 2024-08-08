@@ -22,7 +22,7 @@ class MvvmFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_architecture, container, false)
+        val view = inflater.inflate(R.layout.fragment_list, container, false)
         val recycler = view.findViewById<RecyclerView>(R.id.recycler_view)
         view.findViewById<View>(R.id.background)?.setBackgroundColor(Color.CYAN)
 
