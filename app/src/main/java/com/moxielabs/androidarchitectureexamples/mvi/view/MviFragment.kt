@@ -1,5 +1,6 @@
 package com.moxielabs.androidarchitectureexamples.mvi.view
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +26,7 @@ class MviFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_list, container, false)
+        view.findViewById<View>(R.id.background)?.setBackgroundColor(Color.GREEN)
 
         viewModel = ViewModelProvider(requireActivity())[MviViewModel::class.java]
 
